@@ -7,28 +7,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activities.ShellActivity">
+    tools:context="com.biometric.android.androidbiometricauthentication.activities.AuthenticateActivity">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:id="@+id/button_register"
-        android:textSize="20dp"
-        android:padding="20dp"
-        android:width="300dp"
-        android:layout_marginTop="167dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose authentication method:"
+        android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Authenticate"
-        android:id="@+id/button_authenticate"
+        android:text="Fingerprint"
+        android:id="@+id/button_fingerprint"
         android:textSize="20dp"
         android:padding="20dp"
         android:width="300dp"
-        android:layout_below="@+id/button_register"
+        android:layout_above="@+id/button_face"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Face Recognition"
+        android:id="@+id/button_face"
+        android:textSize="20dp"
+        android:padding="20dp"
+        android:width="300dp"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

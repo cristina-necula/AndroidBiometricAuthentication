@@ -1,5 +1,6 @@
 package com.biometric.android.androidbiometricauthentication.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
@@ -15,7 +16,6 @@ public class ShellActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shell);
-
         initUIElements();
     }
 
@@ -29,13 +29,16 @@ public class ShellActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+        Intent intent = null;
         switch (view.getId()) {
             case R.id.button_authenticate:
-                // TODO - navigate to authenticate page
+                intent = new Intent(this, AuthenticateActivity.class);
                 break;
             case R.id.button_register:
-                // TODO - navigate to register page
+                intent = new Intent(this, RegisterActivity.class);
                 break;
         }
+        assert intent != null;
+        startActivity(intent);
     }
 }
