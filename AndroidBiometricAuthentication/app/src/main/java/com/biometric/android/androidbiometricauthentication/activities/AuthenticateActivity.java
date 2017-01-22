@@ -1,5 +1,6 @@
 package com.biometric.android.androidbiometricauthentication.activities;
 
+import android.Manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
