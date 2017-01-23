@@ -1,6 +1,7 @@
 package com.biometric.android.androidbiometricauthentication.activities;
 
 import android.Manifest;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,13 +28,17 @@ public class AuthenticateActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View view) {
+        Intent intent = null;
         switch (view.getId()){
             case R.id.button_face:
                 // TODO
                 break;
             case R.id.button_fingerprint:
-                // TODO
+                intent = new Intent(this, FingerprintActivity.class);
                 break;
         }
+        assert intent != null;
+        startActivity(intent);
     }
+
 }

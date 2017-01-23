@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.AuthenticateActivity"></activity>
+        <activity android:name=".activities.AuthenticateActivity" />
+        <activity android:name=".activities.FingerprintActivity"></activity>
     </application>
 
 </manifest>
