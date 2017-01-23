@@ -10,4 +10,4 @@ Prerequisites:
  	- Android Suport Repository
  	- Android Auto Desktop Head Unit Emulator
  	- Google Repository
- 	- Google USB Driver
+ 	- Google USB Driver - only on Windows
