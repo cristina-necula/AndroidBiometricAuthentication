@@ -3,10 +3,12 @@ package com.biometric.android.androidbiometricauthentication.activities;
 import android.Manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.biometric.android.androidbiometricauthentication.R;
+import com.qualcomm.snapdragon.sdk.face.FacialProcessing;
 
 public class AuthenticateActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -15,6 +17,9 @@ public class AuthenticateActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authenticate);
         initUIElements();
+
+        // TODO DELETE THIS
+        Log.v("RECOGNITION", String.valueOf(FacialProcessing.isFeatureSupported(FacialProcessing.FEATURE_LIST.FEATURE_FACIAL_RECOGNITION)));
     }
 
     private void initUIElements(){
